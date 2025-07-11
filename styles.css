@@ -95,6 +95,7 @@ nav {
     text-align: center;
     position: relative;
     background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    padding-top: 5rem; /* So content doesn't hide behind navbar */
 }
 
 .hero-content h1 {
@@ -198,7 +199,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
 }
 
@@ -318,41 +319,29 @@ section {
     margin: 0 auto;
 }
 
-.contact-form {
-    display: grid;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.form-group {
+.contact-grid {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.form-group label {
-    margin-bottom: 0.5rem;
-    color: var(--text-secondary);
+.contact-icon i {
+    font-size: 32px;
+    color: #94a3b8;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.form-group input,
-.form-group textarea {
-    padding: 1rem;
-    border: 2px solid var(--card-bg);
-    border-radius: 10px;
-    background: var(--card-bg);
-    color: var(--text-primary);
-    transition: border-color 0.3s ease;
+.contact-icon i:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+.update-message {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
 }
 
 /* Footer */
@@ -399,7 +388,7 @@ footer {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
     .projects-grid {
@@ -445,29 +434,4 @@ html {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.contact-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.contact-icon i {
-    font-size: 32px; /* Change size as you like */
-    color: #333;     /* Or your accent color */
-    transition: color 0.3s, transform 0.3s;
-}
-
-.contact-icon i:hover {
-    color: #007bff; /* Change to your hover accent color */
-    transform: scale(1.2);
-}
-
-.update-message {
-    text-align: center;
-    margin-top: 20px;
-    font-style: italic;
-    color: #777;
 }
