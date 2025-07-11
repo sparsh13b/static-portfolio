@@ -191,13 +191,16 @@ section {
     align-items: center;
 }
 
+
 .about-text {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    display: flex;
-    align-items: center;
+  text-align: center;
+  margin: 0 auto; /* Center container if needed */
+  max-width: 800px; 
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
+
 
 .skills-grid {
     display: grid;
